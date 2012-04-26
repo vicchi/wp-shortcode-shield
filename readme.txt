@@ -77,12 +77,18 @@ Totally; this plugin is licensed under the GNU General Public License v2 (GPLV2)
 
 == Changelog ==
 
-The current version is 1.0 (2012.04.24)
+The current version is 1.0.1 (2012.04.26)
+
+= 1.0.1 =
+Fixed: Ensure WP_PluginBase is properly included and defined.
 
 = 1.0 =
 * This is the first version of WP Shortcode Shield.
 
 == Upgrade Notice ==
+
+= 1.0.1 =
+Fixed a bug where WP_PluginBase is properly included and defined. This is the 2nd. version of WP Shortcode Shield.
 
 = 1.0 =
 * This is the first version of WP Shortcode Shield.
