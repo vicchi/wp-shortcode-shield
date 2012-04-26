@@ -4,7 +4,7 @@ Donate link: http://www.vicchi.org/codeage/donate/
 Tags: page, post, shortcode, documentation
 Requires at least: 3.3
 Tested up to: 3.3.2
-Stable tag: 1.0
+Stable tag: 1.0.1
 
 Allows posts and pages to easily document WordPress shortcodes without the shortcode being expanded.
 

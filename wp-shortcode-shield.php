@@ -3,7 +3,7 @@
 Plugin Name: WP ShortCode Shield
 Plugin URI: http://www.vicchi.org/codeage/wp-shortcode-shield/
 Description: Allows posts and pages to easily document WordPress short-codes without the short-code being expanded.
-Version: 1.0
+Version: 1.0.1
 Author: Gary Gale
 Author URI: http://www.garygale.com/
 License: GPL2
