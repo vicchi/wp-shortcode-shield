@@ -9,6 +9,10 @@ Author URI: http://www.garygale.com/
 License: GPL2
 */
 
+define ('WPSHORTCODESHIELD_PATH', plugin_dir_path (__FILE__));
+
+require_once (WPSHORTCODESHIELD_PATH . '/wp-plugin-base/wp-plugin-base.php');
+
 class WP_ShortCodeShield extends WP_PluginBase {
 	static $instance;
 	
