@@ -11,9 +11,9 @@ License: GPL2
 
 define ('WPSHORTCODESHIELD_PATH', plugin_dir_path (__FILE__));
 
-require_once (WPSHORTCODESHIELD_PATH . '/wp-plugin-base/wp-plugin-base.php');
+require_once (WPSHORTCODESHIELD_PATH . '/includes/wp-plugin-base/wp-plugin-base.php');
 
-class WP_ShortCodeShield extends WP_PluginBase {
+class WP_ShortCodeShield extends WP_PluginBase_v1_1 {
 	static $instance;
 	
 	const LANGB = '&#91;';
