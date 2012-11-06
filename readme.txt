@@ -2,9 +2,11 @@
 Contributors: vicchi
 Donate link: http://www.vicchi.org/codeage/donate/
 Tags: page, post, shortcode, documentation
-Requires at least: 3.3
-Tested up to: 3.3.2
-Stable tag: 1.0.1
+Requires at least: 3.4
+Tested up to: 3.4.2
+Stable tag: 1.1.0
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Allows posts and pages to easily document WordPress shortcodes without the shortcode being expanded.
 
@@ -77,7 +79,10 @@ Totally; this plugin is licensed under the GNU General Public License v2 (GPLV2)
 
 == Changelog ==
 
-The current version is 1.0.1 (2012.04.26)
+The current version is 1.1.0 (2012.11.06)
+
+= 1.1.0 =
+Other: Upgraded plugin to new version of WP_PluginBase to prevent class name clashes during future upgrades.
 
 = 1.0.1 =
 Fixed: Ensure WP_PluginBase is properly included and defined.
@@ -86,6 +91,9 @@ Fixed: Ensure WP_PluginBase is properly included and defined.
 * This is the first version of WP Shortcode Shield.
 
 == Upgrade Notice ==
+
+= 1.1.0 =
+Maintenance version; upgraded plugin to new version of WP_PluginBase to prevent class name clashes during future upgrades.
 
 = 1.0.1 =
 Fixed a bug where WP_PluginBase is properly included and defined. This is the 2nd. version of WP Shortcode Shield.
