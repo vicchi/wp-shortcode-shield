@@ -41,11 +41,25 @@ if (!class_exists ('WP_ShortCodeShield')) {
 			return self::$instance;
 			
 		}
+
+		/**
+		 * "plugins_loaded" action hook; called after all active plugins and pluggable
+		 * functions are loaded.
+		 *
+		 * Add the shortcode support actions for the short form shortcode [wp_scs] and the
+		 * long form shortcode [wp_shortcode_shield].
+		 */
+		
 		public function plugins_loaded () {
 			add_shortcode ('wp_scs', array ($this, 'shortcode'));
 			add_shortcode ('wp_shortcode_shield', array ($this, 'shortcode'));
 		}
 	
+		/**
+		 * Shortcode handler for the [wp_scs] and [wp_shortcode_shield] shortcodes; expands
+		 * the shortcode to wrap the enclosed shortcode.
+		 */
+		
 		public function shortcode ($atts, $content=null) {
 			extract (shortcode_atts (array ('code' => ''), $atts));
 		
@@ -66,9 +80,14 @@ if (!class_exists ('WP_ShortCodeShield')) {
 			}
 		}
 	
+		/**
+		 * Helper function; encloses a section of content in square brackets [ ... ]
+		 */
+		
 		private function enclose ($content) {
 			return self::LANGB . $content . self::RANGB;
 		}
+		
 	}	// end-class WP_ShortCodeShield
 }	// if (!class_exists ('WP_ShortCodeShield'))
 
