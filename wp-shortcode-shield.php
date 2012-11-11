@@ -17,8 +17,8 @@ if (!class_exists ('WP_ShortCodeShield')) {
 	class WP_ShortCodeShield extends WP_PluginBase_v1_1 {
 		private static $instance;
 	
-		const LANGB = '&#91;';
-		const RANGB = '&#93;';
+		const LSQB = '&#91;';
+		const RSQB = '&#93;';
 	
 		/**
 		 * Class constructor
@@ -85,7 +85,7 @@ if (!class_exists ('WP_ShortCodeShield')) {
 		 */
 		
 		private function enclose ($content) {
-			return self::LANGB . $content . self::RANGB;
+			return self::LSQB . $content . self::RSQB;
 		}
 		
 	}	// end-class WP_ShortCodeShield
