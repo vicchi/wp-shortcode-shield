@@ -15,23 +15,38 @@ require_once (WPSHORTCODESHIELD_PATH . '/includes/wp-plugin-base/wp-plugin-base.
 
 if (!class_exists ('WP_ShortCodeShield')) {
 	class WP_ShortCodeShield extends WP_PluginBase_v1_1 {
-		static $instance;
+		private static $instance;
 	
 		const LANGB = '&#91;';
 		const RANGB = '&#93;';
 	
-		function __construct () {
-			self::$instance = $this;
+		/**
+		 * Class constructor
+		 */
 		
+		private function __construct () {
 			$this->hook ('plugins_loaded');
 		}
 	
-		function plugins_loaded () {
+		/**
+		 * Class singleton factory helper
+		 */
+		
+		public static function get_instance () {
+			if (!isset (self::$instance)) {
+				$c = __CLASS__;
+				self::$instance = new $c ();
+			}
+			
+			return self::$instance;
+			
+		}
+		public function plugins_loaded () {
 			add_shortcode ('wp_scs', array ($this, 'shortcode'));
 			add_shortcode ('wp_shortcode_shield', array ($this, 'shortcode'));
 		}
 	
-		function shortcode ($atts, $content=null) {
+		public function shortcode ($atts, $content=null) {
 			extract (shortcode_atts (array ('code' => ''), $atts));
 		
 			// Self-closing shortcode form ...
@@ -51,12 +66,12 @@ if (!class_exists ('WP_ShortCodeShield')) {
 			}
 		}
 	
-		function enclose ($content) {
+		private function enclose ($content) {
 			return self::LANGB . $content . self::RANGB;
 		}
 	}	// end-class WP_ShortCodeShield
 }	// if (!class_exists ('WP_ShortCodeShield'))
 
-$__wp_shortcode_shield_instance = new WP_ShortCodeShield;
+WP_ShortCodeShield::get_instance ();
 
 ?>
