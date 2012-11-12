@@ -63,7 +63,7 @@ Finally a note of caution, you cannot mix the enclosing and self closing form of
 
 = How do I get help or support for this plugin? =
 
-In short, very easily. But before you read any further, take a look at [Asking For WordPress Plugin Help And Support Without Tears](http://www.vicchi.org/2012/03/31/asking-for-wordpress-plugin-help-and-support-without-tears/) before firing off a question. In order of preference, you can ask a question on the [WordPress support forum](http://wordpress.org/tags/wp-shortcode-shield?forum_id=10); this is by far the best way so that other users can follow the conversation. You can ask me a question on Twitter; I'm [@vicchi](http://twitter.com/vicchi). Or you can drop me an email instead. I can't promise to answer your question but I do promise to answer and do my best to help.
+In short, very easily. But before you read any further, take a look at [Asking For WordPress Plugin Help And Support Without Tears](http://www.vicchi.org/2012/03/31/asking-for-wordpress-plugin-help-and-support-without-tears/) before firing off a question. In order of preference, you can ask a question on the [WordPress support forum](http://wordpress.org/support/plugin/wp-shortcode-shield); this is by far the best way so that other users can follow the conversation. You can ask me a question on Twitter; I'm [@vicchi](http://twitter.com/vicchi). Or you can drop me an email instead. I can't promise to answer your question but I do promise to answer and do my best to help.
 
 = Is there a web site for this plugin? =
 
@@ -79,15 +79,20 @@ Totally; this plugin is licensed under the GNU General Public License v2 (GPLV2)
 
 == Changelog ==
 
-The current version is 1.1.0 (2012.11.06)
+The current version is 1.1.0 (2012.11.12)
 
 = 1.1.0 =
-Other: Upgraded plugin to new version of WP_PluginBase to prevent class name clashes during future upgrades.
+* Released 2012.11.12
+* Other: Upgraded plugin to new version of WP_PluginBase to prevent class name clashes during future upgrades.
+* Other: Ensure WP_ShortCodeShield is not already defined and instantiate as a singleton.
+* Other: Rename misleading plugin constants (they're square brackets not angle brackets)
 
 = 1.0.1 =
-Fixed: Ensure WP_PluginBase is properly included and defined.
+* Released 2012.08.29
+* Fixed: Ensure WP_PluginBase is properly included and defined.
 
 = 1.0 =
+* Released 2012.07.17
 * This is the first version of WP Shortcode Shield.
 
 == Upgrade Notice ==
